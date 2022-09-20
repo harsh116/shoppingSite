@@ -11,11 +11,11 @@ function MainApp(props) {
     <Router>
       <Routes>
         <Route
-          path="/"
+          path="/shoppingSite"
           element={<App cartItems={cartItems} setCartItems={setCartItems} />}
         />
         <Route
-          path="/checkout"
+          path="/shoppingSite/checkout"
           element={
             <Checkout
               cartItems={cartItems}
@@ -24,7 +24,7 @@ function MainApp(props) {
             />
           }
         />
-        <Route path="/checkout/finish" element={<ThankYou />} />
+        <Route path="/shoppingSite/checkout/finish" element={<ThankYou />} />
       </Routes>
     </Router>
   );

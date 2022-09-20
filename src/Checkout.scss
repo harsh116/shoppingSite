@@ -1,0 +1,154 @@
+@import "config";
+
+.Checkout {
+  display: flex;
+  .itemSection {
+    width: 65%;
+    min-width: 500px;
+    display: grid;
+    grid-template-columns: 5fr 2fr 3fr 2fr;
+    margin-right: 5%;
+
+    .pill {
+      display: flex;
+      border: 1px solid darken($greyshade, 5%);
+      border-radius: 999px;
+      
+
+      button {
+        font-size: 1.5rem;
+        flex-grow: 1;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: darken($greyshade, 30%);
+        
+      }
+
+      span {
+        flex-grow: 2;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    .product img {
+      width: 100px;
+      height: 70%;
+      margin: 0 0.5rem;
+    }
+
+    .product span {
+      width: fit-content;
+      text-align: left;
+    }
+
+    .product button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 1.6rem;
+      color: $blackShade;
+    }
+
+    & > * {
+      border-bottom: 2px solid darken($greyshade, 5%);
+      height: 6rem;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:nth-child(4n + 1) {
+        justify-content: flex-start;
+      }
+
+      &:nth-child(4n + 0) {
+        text-align: right;
+       
+
+        span {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .header {
+    font-weight: bold;
+    box-sizing: border-box;
+    text-align: center;
+    height: 4rem;
+    
+
+    &:nth-child(4) {
+      justify-content: end;
+    }
+  }
+
+  .cartSection {
+    width: 30%;
+    min-width: 200px;
+    height: 13rem;
+    border: 2px solid darken($greyshade, 5%);
+    padding: 0.4rem;
+
+    h3 {
+      margin: 0.8rem 0;
+    }
+
+    .subtotalSection {
+      
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+    }
+
+    .subtotalSection,
+    .totalSection {
+      height: 2rem;
+      display: flex;
+      border-bottom: 1px solid darken($greyshade, 5%);
+
+      .subtotalHeader,
+      .totalHeader {
+        width: 50%;
+        font-weight: bold;
+      }
+
+      .subtotalValue,
+      .totalValue {
+        width: 50%;
+        text-align: right;
+        color: $darker-blue-shade;
+      }
+    }
+    .totalSection {
+      border: none;
+      padding-top: 0.5rem;
+
+      .totalHeader {
+        font-size: 1.3rem;
+      }
+      .totalValue {
+        font-size: 1rem;
+      }
+    }
+
+    .proceed {
+      margin-top: 1rem;
+      color: white;
+      background-color: $darker-blue-shade;
+      border: none;
+      border-radius: 9999px;
+      padding: 1rem 0.5rem;
+      width: 100%;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: lighten($darker-blue-shade, 5%);
+      }
+    }
+  }
+}

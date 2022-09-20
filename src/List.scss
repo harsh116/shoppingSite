@@ -1,0 +1,108 @@
+@import "config";
+
+.List {
+  display: grid;
+  grid-template-columns:
+    minmax(100px, 1fr) minmax(200px, 3fr) minmax(150px, 2fr)
+    minmax(100px, 1fr) minmax(100px, 1fr) minmax(200px, 3fr);
+  margin-top: 0.5rem;
+
+  .image,
+  .name,
+  .rating,
+  .stock,
+  .price,
+  .buyoption {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    height: 5rem;
+  }
+
+  .image {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .stock {
+    color: $green-shade;
+  }
+
+  .name .overlay {
+    width: 200px;
+    max-height: 100px;
+  }
+
+  .name > span {
+    cursor: pointer;
+  }
+
+  .tippy-box[data-theme~="custom"] {
+    background-color: rgb(220, 220, 220, 0.8);
+    border: 1px solid black;
+    overflow-y: auto;
+    color: black;
+  }
+  .name,
+  .rating {
+    color: $blue-font;
+    text-decoration: underline;
+  }
+
+  .buyoption {
+    display: flex;
+    justify-content: end;
+
+    .hr {
+      width: 100%;
+      height: 1rem;
+      border-top: 1px solid rgb(150, 150, 150);
+    }
+
+    input[type="checkbox"] {
+      height: fit-content;
+      margin-top: 0.3rem;
+      cursor: pointer;
+    }
+
+    .cartIcon,
+    .inputQty {
+      width: 4rem;
+      height: 1.5rem;
+    }
+
+    .cartIcon {
+      background-color: $blackShade;
+      color: white;
+
+      * {
+        margin-left: 0.5rem;
+      }
+    }
+    .inputQty {
+      box-sizing: border-box;
+      background-color: $greyshade;
+      border: none;
+
+      border: 1px solid darken($greyshade, 5%);
+      border-top-width: 2px;
+      outline: none;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .header {
+    background-color: $greyshade;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid black;
+  }
+
+  .buy {
+    display: flex;
+    justify-content: end;
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+}

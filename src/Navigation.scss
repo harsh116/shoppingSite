@@ -1,0 +1,72 @@
+@import "config";
+
+.Navigation {
+  display: flex;
+}
+
+.filter {
+  width: 50%;
+  display: flex;
+  min-width: 400px;
+
+  select {
+    margin: 0 0.5rem;
+    padding: 0.2rem;
+    border: 1px solid #9f9b9b;
+    // border: 1px solid whitesmoke;
+    border-radius: 5px;
+  }
+
+  .reset {
+    // color: $blue-font;
+    color: deepskyblue;
+    font-size: 0.8rem;
+    align-self: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: darken(deepskyblue, 10%);
+    }
+  }
+}
+
+.search {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  min-width: 300px;
+
+  .searchSection {
+    margin-right: 0.5rem;
+
+    .searchtext {
+      color: rgb(130, 130, 130);
+    }
+
+    input {
+      background-color: $greyshade;
+      border: none;
+      width: 8rem;
+      height: 1.5rem;
+      border: 1px solid darken($greyshade, 5%);
+      border-top-width: 2px;
+      outline: none;
+    }
+  }
+
+  .cartBtn {
+    button {
+      padding: 0.4rem 0.9rem;
+      border: none;
+      background-color: $blue-shade;
+      color: white;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: darken($blue-shade, 5%);
+      }
+    }
+  }
+}

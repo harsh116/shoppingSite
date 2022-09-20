@@ -32,7 +32,7 @@ function Navigation(props) {
 
   const navigateToCart = () => {
     if (cartItems.length > 0) {
-      navigate(`/checkout`, {
+      navigate(`/shoppingSite/checkout`, {
       
       });
     } else {

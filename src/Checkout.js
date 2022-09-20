@@ -138,7 +138,7 @@ function Checkout(props) {
         </div>
         <button
           onClick={() => {
-            navigate("/checkout/finish");
+            navigate("/shoppingSite/checkout/finish");
           }}
           className="proceed"
         >
